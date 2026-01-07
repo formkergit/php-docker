@@ -26,9 +26,33 @@ services:
     networks:
       - php-network
 
+  adminer:
+    image: adminer:latest
+    container_name: php-adminer
+    ports:
+      - "8081:8080"
+    networks:
+      - php-network
+    depends_on:
+      - db
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: php-phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    ports:
+      - "8082:80"
+    networks:
+      - php-network
+    depends_on:
+      - db
+
 volumes:
   db-data:
 
 networks:
   php-network:
     driver: bridge
+
