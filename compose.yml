@@ -1,3 +1,4 @@
+name: php-docker
 services:
   web:
     build: ./php

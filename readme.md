@@ -1,5 +1,12 @@
 # PHP Doccker
 
-Lancer la stack  : `docker compose up -d --build`
+Personnaliser le nom de votre stack dans la variable `name` du `compose.yml`.
 
-Ensite aller : `http://localhost:8080`
+Lancer la stack  :  
+`docker compose up -d --build`
+
+arreter la stack  :  
+`docker compose down`
+
+Ensuite lancer :  
+`http://localhost:8080`
