@@ -6,8 +6,8 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www/html:Z
-      - ./config/.htaccess:/var/www/html/.htaccess:Z
+      - ./code:/var/www/html
+      - ./config/.htaccess:/var/www/html/.htaccess
     depends_on:
       - db
     networks:
