@@ -1,18 +1,14 @@
-<?php 
-//phpinfo(); 
-
-$host = 'db';
-$username = 'root';
-$password = 'root';
-$database = 'phpdb';
-
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    die("Good connecté à la base de donnée ;-)");
-} catch (PDOException $e) {
-    echo "Ho ho Connection failed !!! => " . $e->getMessage();
-    die();
-}
-
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Docker</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <p><a href="./connectDb.php">Tester la connexion à la base de donnée</a></p>
+    <p><a href="phpinfo.php">PHP info</a></p>    
+    <p><a href="pageinexistante.php">Test page 404</a></p>    
+</body>
+</html>
