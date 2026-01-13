@@ -10,5 +10,6 @@
     <p><a href="./connectDb.php">Tester la connexion à la base de donnée</a></p>
     <p><a href="phpinfo.php">PHP info</a></p>    
     <p><a href="pageinexistante.php">Test page 404</a></p>    
+    <p><a href="backupDb.php">Backup Base de donnée</a></p>    
 </body>
 </html>
