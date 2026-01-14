@@ -7,8 +7,6 @@ services:
       - "8080:80"
     volumes:
       - ./code:/var/www/html
-      - ./config/.htaccess:/var/www/html/.htaccess
-      - ./backups:/var/www/html/backups
     depends_on:
       - db
     networks:
